@@ -1,0 +1,37 @@
+.thread-container {
+    display: flex;
+    flex-direction: column;
+    height: 10vw;
+    width: 15vw;
+    
+}
+
+.thread-header {
+    width: 100%;
+    height: 3.8vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5vw;
+    padding-top: 0.2vw;
+}
+
+.thread-content {
+    width: 100%;
+    height: 100%;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+
+}
+
+.partial-divider {
+    width: 83%;
+    margin-left: 2.2vw;
+    background-color: rgb(236, 236, 236);
+    height: 0.1vw;
+}
+
+.complete-divider {
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    height: 0.1vw;
+}

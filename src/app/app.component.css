@@ -1,0 +1,99 @@
+.main-container {
+    height: 47vw;
+    width: 95vw;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.content-container > div {
+    height: 100%;
+}
+
+.left-panel {
+    width: 30%;
+    background-color: rgba(243, 243, 243, 0.541);
+    display: flex;
+    flex-direction: column;
+}
+
+.left-panel-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-panel {
+    width: 70%;
+    background-color: rgb(255, 255, 255);
+    border-left: 0.08px solid rgb(236, 236, 236);
+}
+
+.logo-container {
+    margin-left: 1.5vw;
+    margin-top: 1.5vw;
+    width: 10vw;
+    height: 4vw;
+
+}
+.right-panel-header {
+    margin-top: 1.5vw;
+    height: 4vw;
+    width: 100%;
+    padding-left: 6vw;
+}
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+}
+.header-buttons > button {
+    background-color: white;
+    font-size:1.15vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(146, 146, 146);
+    height: 2.5vw;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    width: 6vw;
+    cursor: pointer;
+    margin-bottom: -0.5vw; 
+    text-align: left;
+}
+
+.header-buttons > button:hover {
+    color: rgb(112, 112, 112);
+}
+
+.right-panel-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 6vw;
+    padding-right: 6vw; 
+    padding-top: 5vw; 
+}
+
+.right-panel-content > div {
+    height: 10vw;
+    width: 15vw;
+}
+
+.partial-divider {
+    width: 83%;
+    margin-left: 2.2vw;
+    background-color: rgb(236, 236, 236);
+    height: 0.1vw;
+}
+
+.complete-divider {
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    height: 0.1vw;
+}
+
