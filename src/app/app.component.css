@@ -1,3 +1,5 @@
+
+
 .main-container {
     height: 47vw;
     width: 95vw;
@@ -76,7 +78,7 @@
     flex-wrap: wrap;
     padding-left: 6vw;
     padding-right: 6vw; 
-    padding-top: 5vw; 
+    padding-top: 2vw; 
 }
 
 .right-panel-content > div {

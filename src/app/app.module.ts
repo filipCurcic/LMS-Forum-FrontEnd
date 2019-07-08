@@ -15,8 +15,9 @@ import { ThreadTilesViewComponent } from './components/thread-tiles-view/thread-
 import { ThreadComponent } from './components/thread/thread.component';
 import { FacultyThreadViewComponent } from './components/faculty-thread-view/faculty-thread-view.component';
 import { FacultyViewComponent } from './components/faculty-view/faculty-view.component';
-
-
+import { NewThreadComponent } from './components/new-thread/new-thread.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { FacultyViewComponent } from './components/faculty-view/faculty-view.com
     ThreadComponent,
     FacultyThreadViewComponent,
     FacultyViewComponent,
+    NewThreadComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,9 @@ import { FacultyViewComponent } from './components/faculty-view/faculty-view.com
     MatCardModule,
     MatToolbarModule,
     MatButtonToggleModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

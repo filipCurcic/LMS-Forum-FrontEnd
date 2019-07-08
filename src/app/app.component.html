@@ -18,9 +18,9 @@
                 <div class="right-panel-header">
                   
                   <div class="header-buttons">
-                    <button>Test</button>
-                    <button>Test2</button>
-                    <button>Test3</button>
+                    <button>Button</button>
+                    <button>Button1</button>
+                    <button>Button2</button>
                     <mat-button-toggle-group #group="matButtonToggleGroup" style="margin-left: 31.6vw;" value="left">
                         <mat-button-toggle value="left" aria-label="Text align left" routerLink="/tileView" >
                           <mat-icon>view_stream</mat-icon>
@@ -37,11 +37,14 @@
                 </div>
                 <div class="complete-divider"></div>
                 <div class="right-panel-content">
+                  <span style="margin-left: 49.27vw; margin-bottom: 1vw">
+                    <button mat-raised-button routerLink="/newThread" *ngIf="router.url != '/newThread'">New Thread</button> </span>
+                    
                 <router-outlet></router-outlet>
                    
                 </div>
     
-    
+                
             </div>
     
         </div>
