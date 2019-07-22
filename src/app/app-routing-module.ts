@@ -5,6 +5,7 @@ import { ThreadTilesViewComponent } from './components/thread-tiles-view/thread-
 import { FacultyViewComponent } from './components/faculty-view/faculty-view.component';
 import { FacultyThreadViewComponent } from './components/faculty-thread-view/faculty-thread-view.component';
 import { NewThreadComponent } from './components/new-thread/new-thread.component';
+import { ThreadComponent } from './components/thread/thread.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'listView', component:ThreadListViewComponent},
   {path: 'faculties', component:FacultyViewComponent},
   {path: 'newThread', component:NewThreadComponent},
-  {path: 'faculty/:id', component:FacultyThreadViewComponent}
+  {path: 'faculty/:id', component:FacultyThreadViewComponent},
+  {path: 'thread', component:ThreadComponent}
 
 
 ];

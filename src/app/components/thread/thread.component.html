@@ -1,3 +1,52 @@
-<p>
-  thread works!
-</p>
+<div class="thread-container" [class.mat-elevation-z3]="true">
+  <div class="thread-header"></div>
+
+  <div class="content-container">
+    <div class="poster-info">
+      <div class="info">
+        <span style="font-size:0.7vw; font-weight: 660"> ime postera </span>
+        <br>
+        <span style="font-size:0.7vw; ">administrator</span>
+      </div>
+    </div>
+    <div class="thread-content">
+
+      <div class="thread-name">
+        <span style="font-size: 0.865vw; font-weight: 525;">ime teme</span>
+      </div>
+      <div class="partial-divider"></div>
+      <div class="content">
+        <span style="font-size: 0.865vw; font-weight: 300;">sadrzaj sadrzajsadrzajsadrzajsadrzaj s
+          adrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj
+          border: 0.5px solid blue;
+          sadrzajsadrzajsadrzajsadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj
+        </span>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="thread-footer">
+    <span style="float: right; margin-right: 2vw; font-size: 0.6; cursor: pointer;" (click)="openReply()">reply</span>
+  </div>
+
+</div>
+
+<div class="new-reply-container" *ngIf="showReply" [class.mat-elevation-z3]="true">
+  <div class="header">
+    <span>New Reply</span>
+    <span style="position: absolute; left:91%; cursor: pointer;" (click)="closeReply()">x</span>
+  </div>
+  <div class="content-input">
+    <textarea name="" id="" cols="30" rows="10" class="thread-content" placeholder="Thread content.."></textarea>
+  </div>
+
+  <button mat-raised-button routerLink="/" style="width: 6vw; margin-top:1vw; margin-left:48.2vw">Post</button>
+
+
+</div>
+
+
+

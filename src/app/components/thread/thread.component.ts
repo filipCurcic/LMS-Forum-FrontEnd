@@ -12,4 +12,12 @@ export class ThreadComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  openReply() {
+    this.showReply = true;
+  }
+  closeReply() {
+    this.showReply = false;
+  }
+  showReply:boolean;
 }

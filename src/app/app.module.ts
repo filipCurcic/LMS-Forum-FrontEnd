@@ -18,6 +18,7 @@ import { FacultyViewComponent } from './components/faculty-view/faculty-view.com
 import { NewThreadComponent } from './components/new-thread/new-thread.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { ReplyComponent } from './reply/reply.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import {MatInputModule} from '@angular/material/input';
     FacultyThreadViewComponent,
     FacultyViewComponent,
     NewThreadComponent,
+    ReplyComponent,
   ],
   imports: [
     BrowserModule,

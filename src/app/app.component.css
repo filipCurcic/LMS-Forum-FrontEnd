@@ -1,7 +1,8 @@
 
 
 .main-container {
-    height: 47vw;
+    min-height: 47vw;
+    max-height: auto;
     width: 95vw;
     margin:auto;
     display: flex;
@@ -28,6 +29,17 @@
 .left-panel-content {
     display: flex;
     flex-direction: column;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+}
+
+.left-panel-content > div {
+    height: 1vw;
+    border: 1px solid red;
+    width: 83%;
+    height: 1vw;
+    margin-bottom: 0.5vw;
+    margin-left: 2.2vw
 }
 
 .right-panel {
