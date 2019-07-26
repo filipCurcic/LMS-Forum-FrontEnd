@@ -29,18 +29,18 @@
   </div>
 
   <div class="thread-footer">
-    <span style="float: right; margin-right: 2vw; font-size: 0.6; cursor: pointer;" (click)="openReply()">reply</span>
+    <span style="float: right; margin-right: 2vw; font-size: 0.6; cursor: pointer; color:rgb(77, 77, 77)" (click)="openReply()" class="reply-button">reply</span>
   </div>
 
 </div>
 
 <div class="new-reply-container" *ngIf="showReply" [class.mat-elevation-z3]="true">
   <div class="header">
-    <span>New Reply</span>
+    <span style="font-weight: 525">New Reply</span>
     <span style="position: absolute; left:91%; cursor: pointer;" (click)="closeReply()">x</span>
   </div>
   <div class="content-input">
-    <textarea name="" id="" cols="30" rows="10" class="thread-content" placeholder="Thread content.."></textarea>
+    <textarea name="" id="" cols="30" rows="10" class="reply-content" placeholder="Reply content.."></textarea>
   </div>
 
   <button mat-raised-button routerLink="/" style="width: 6vw; margin-top:1vw; margin-left:48.2vw">Post</button>

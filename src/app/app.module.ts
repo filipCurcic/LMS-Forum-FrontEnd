@@ -19,6 +19,7 @@ import { NewThreadComponent } from './components/new-thread/new-thread.component
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { ReplyComponent } from './reply/reply.component';
+import { CoursesComponent } from './components/courses/courses.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { ReplyComponent } from './reply/reply.component';
     FacultyViewComponent,
     NewThreadComponent,
     ReplyComponent,
+    CoursesComponent,
   ],
   imports: [
     BrowserModule,

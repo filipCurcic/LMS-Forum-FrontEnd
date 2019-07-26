@@ -6,6 +6,7 @@ import { FacultyViewComponent } from './components/faculty-view/faculty-view.com
 import { FacultyThreadViewComponent } from './components/faculty-thread-view/faculty-thread-view.component';
 import { NewThreadComponent } from './components/new-thread/new-thread.component';
 import { ThreadComponent } from './components/thread/thread.component';
+import { CoursesComponent } from './components/courses/courses.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'faculties', component:FacultyViewComponent},
   {path: 'newThread', component:NewThreadComponent},
   {path: 'faculty/:id', component:FacultyThreadViewComponent},
-  {path: 'thread', component:ThreadComponent}
+  {path: 'thread', component:ThreadComponent},
+  {path: 'courses', component:CoursesComponent}
 
 
 ];

@@ -1,12 +1,11 @@
-
+html, body {margin:0;padding:0;height:100%;}
 
 .main-container {
-    min-height: 47vw;
-    max-height: auto;
     width: 95vw;
     margin:auto;
     display: flex;
     flex-direction: column;
+    min-height: 45vw;
 }
 
 .content-container {
@@ -24,6 +23,9 @@
     background-color: rgba(243, 243, 243, 0.541);
     display: flex;
     flex-direction: column;
+    min-height: 45vw;
+    height: 100%;
+    
 }
 
 .left-panel-content {
@@ -34,18 +36,26 @@
 }
 
 .left-panel-content > div {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
     height: 1vw;
-    border: 1px solid red;
     width: 83%;
     height: 1vw;
     margin-bottom: 0.5vw;
-    margin-left: 2.2vw
+    margin-left: 2.2vw;
+    color: grey;
+}
+
+.left-panel-content > div:hover {
+    color: black;
 }
 
 .right-panel {
     width: 70%;
     background-color: rgb(255, 255, 255);
     border-left: 0.08px solid rgb(236, 236, 236);
+    min-height: 45vw;
+    height: 100%;
 }
 
 .logo-container {

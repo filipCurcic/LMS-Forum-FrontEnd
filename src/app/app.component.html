@@ -3,16 +3,16 @@
         <div class="content-container">
     
             <div class="left-panel">
-                <div class="logo-container">
+                <div class="logo-container" routerLink="/faculties">
                     <img src="../../../assets/lmslogo.png">
                 </div>
                 <div class="partial-divider"></div>
-                <div class="left-panel-content">
-                  <div>
-
+                <div class="left-panel-content" *ngIf="router.url != '/faculties'">
+                  <div routerLink="/faculties">
+                    Softversko i informaciono inzenjerstvo
                   </div>
-                  <div>
-                    
+                  <div routerLink="/faculties">
+                    Informatika i racunarstvo
                   </div>
                 </div>
     

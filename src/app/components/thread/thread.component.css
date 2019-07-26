@@ -52,6 +52,9 @@
     padding-top:0.5vw;
     
 }
+.reply-button:hover {
+    color:black;
+}
 
 .info {
     height: 5vw;
@@ -86,10 +89,12 @@
 
 .new-reply-container {
     margin-top: 2vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 98%;
     height: auto;
     background-color: rgba(243, 243, 243, 0.541);
     padding: 0.5vw;
+    margin-bottom: 2vw;
 }
 
 .thread-content {
