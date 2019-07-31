@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CoursesService } from 'src/app/services/courses/courses.service';
+import { ActivatedRoute } from '@angular/router';
+import Thread from 'src/app/models/thread';
 
 @Component({
   selector: 'app-thread-list-view',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThreadListViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private courseService:CoursesService) { }
 
   ngOnInit() {
+    this.getAll();
   }
+  threads:any = []
 
+
+  getAll():void {
+    this.courseService.getThreads(+this.route.snapshot.paramMap.get('id')).subscribe((data: Thread[]) => {
+      this.threads = data;
+    });
+  }
 }

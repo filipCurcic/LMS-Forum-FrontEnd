@@ -1,18 +1,20 @@
+
 <div class="vertical-thread-container" [class.mat-elevation-z3]="true">
+  
   <div class="thread-information" >
     <div>Name / Poster</div>
-    <div style="margin-left: 30.5vw;">Comments</div>
-    <div style="margin-left: 4.3vw;">Latest Post</div>
+    <div style="margin-left: 30.5vw;">Replies</div>
+    <div style="margin-left: 4.3vw;">Latest Post By</div>
   </div>
-  <div class="thread">
+  <div class="thread" *ngFor="let thread of threads;" routerLink="/thread/{{thread.id}}" >
     <div class="thread-name">
-      thread thread thread thread thread thread thread thread thread thread thread 
+      {{thread.threadName}}
       <br>
-      <span style="font-size: 0.7vw">posted by poster, 6/4/2019</span>
+      <span style="font-size: 0.7vw">posted by {{thread.author.registeredUser.username}}, {{thread.dateOfCreation | date}}</span>
 
     </div>
     <div class="thread-comments">
-      <span style="margin-left: 0.3vw; position: relative; top: 1vw"> Comments: 24 </span>
+      <span style="margin-left: 0.3vw; position: relative; top: 1vw"> Replies: 24 </span>
       
     </div>
     <div class="thread-latest-post">
@@ -25,16 +27,4 @@
 
   </div>
 
-  <div class="thread">
-    <div class="thread-name">
-    </div>
-    <div class="thread-comments">
-
-    </div>
-    <div class="thread-latest-post">
-      
-    </div>
-
-
-  </div>
 </div>

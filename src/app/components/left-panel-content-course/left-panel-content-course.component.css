@@ -1,0 +1,24 @@
+
+
+
+.left-panel-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+}
+
+.left-panel-content > div {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    height: 1vw;
+    width: 83%;
+    height: 1vw;
+    margin-bottom: 0.5vw;
+    margin-left: 2.2vw;
+    color: grey;
+}
+
+.left-panel-content > div:hover {
+    color: black;
+}

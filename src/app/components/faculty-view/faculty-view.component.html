@@ -4,10 +4,10 @@
       <div style="margin-left: 33.5vw;">Threads</div>
       <div style="margin-left: 4.3vw;">Latest Thread</div>
     </div>
-    <div class="thread">
-      <div class="thread-name" routerLink="/courses">
+    <div class="thread" *ngFor="let faculty of faculties;">
+      <div class="thread-name" routerLink="/faculty/{{faculty.id}}">
           
-        Turizam
+        {{faculty.faculty.name}}
       </div>
       <div class="thread-comments"> 
         <span style="margin-left: 1.3vw; position: relative; top: 1vw"> Threads: 24 </span>
@@ -22,22 +22,5 @@
   
   
     </div>
-  
-    <div class="thread">
-      <div class="thread-name">
-        Softversko
-      </div>
-      <div class="thread-comments"> 
-          <span style="margin-left: 1.3vw; position: relative; top: 1vw"> Threads: 12 </span>
-          
-        </div>
-        <div class="thread-latest-post">
-          <span style="margin-left: 2.3vw; position: relative; top: 0.7vw">Username</span>
-          <br>
-          <span style="margin-left: 2.3vw; position: relative; top: 0.65vw;font-size: 0.6vw;">03.04.2019</span>
-          
-        </div>
-  
-  
-    </div>
+ 
   </div>

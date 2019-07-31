@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FacultySubForumService } from 'src/app/services/faculty-sub-forum/faculty-sub-forum.service';
+import FacultySubForum from 'src/app/models/facultySubForum';
 
 @Component({
   selector: 'app-faculty-view',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FacultyViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private facultyService:FacultySubForumService) { }
 
   ngOnInit() {
+    this.getFaculties();
+    console.log(this.faculties)
+  }
+
+  faculties:any = []
+
+  getFaculties():void {
+    this.facultyService.getAll().subscribe((data: FacultySubForum[]) => {
+      this.faculties = data;
+    });
   }
 
 }

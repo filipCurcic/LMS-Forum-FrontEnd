@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing-module';
-
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
@@ -18,8 +18,10 @@ import { FacultyViewComponent } from './components/faculty-view/faculty-view.com
 import { NewThreadComponent } from './components/new-thread/new-thread.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
-import { ReplyComponent } from './reply/reply.component';
 import { CoursesComponent } from './components/courses/courses.component';
+import { LeftPanelContentFacultyComponent } from './components/left-panel-content-faculty/left-panel-content-faculty.component';
+import { LeftPanelContentCourseComponent } from './components/left-panel-content-course/left-panel-content-course.component';
+import { ReplyComponent } from './components/reply/reply.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,9 +34,12 @@ import { CoursesComponent } from './components/courses/courses.component';
     NewThreadComponent,
     ReplyComponent,
     CoursesComponent,
+    LeftPanelContentFacultyComponent,
+    LeftPanelContentCourseComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,

@@ -4,7 +4,7 @@
   <div class="content-container">
     <div class="poster-info">
       <div class="info">
-        <span style="font-size:0.7vw; font-weight: 660"> ime postera </span>
+        <span style="font-size:0.7vw; font-weight: 660"> {{thread.author.registeredUser.username}} </span>
         <br>
         <span style="font-size:0.7vw; ">administrator</span>
       </div>
@@ -16,10 +16,8 @@
       </div>
       <div class="partial-divider"></div>
       <div class="content">
-        <span style="font-size: 0.865vw; font-weight: 300;">sadrzaj sadrzajsadrzajsadrzajsadrzaj s
-          adrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj
-          border: 0.5px solid blue;
-          sadrzajsadrzajsadrzajsadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj sadrzaj
+        <span style="font-size: 0.865vw; font-weight: 300;">
+          {{thread.content}}
         </span>
       </div>
 
@@ -40,13 +38,46 @@
     <span style="position: absolute; left:91%; cursor: pointer;" (click)="closeReply()">x</span>
   </div>
   <div class="content-input">
-    <textarea name="" id="" cols="30" rows="10" class="reply-content" placeholder="Reply content.."></textarea>
+    <textarea name="" id="" cols="143" rows="10" class="reply-content" placeholder="Reply content.."></textarea>
   </div>
 
-  <button mat-raised-button routerLink="/" style="width: 6vw; margin-top:1vw; margin-left:48.2vw">Post</button>
+  <button mat-raised-button style="width: 6vw; margin-top:1vw; margin-left:48.2vw">Post</button>
+
+
+  
 
 
 </div>
 
+
+<div class="reply-container" [class.mat-elevation-z3]="true" *ngFor="let reply of replies;">
+  <div class="thread-header"></div>
+
+  <div class="content-container">
+    <div class="reply-poster-info">
+      <div class="info">
+        <span style="font-size:0.7vw; font-weight: 660"> {{reply.author.registeredUser.username}} </span>
+        <br>
+        <span style="font-size:0.7vw; ">administrator</span>
+      </div>
+    </div>
+    <div class="reply-thread-content">
+
+      
+      <div class="reply-content">
+        <span style="font-size: 0.865vw; font-weight: 300;">
+          {{reply.content}}
+        </span>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="thread-footer">
+  </div>
+
+</div>
 
 

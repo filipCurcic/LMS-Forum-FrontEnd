@@ -12,11 +12,11 @@ import { CoursesComponent } from './components/courses/courses.component';
 const routes: Routes = [
   { path: '', redirectTo: '/faculties', pathMatch: 'full' },
   {path: 'tileView', component:ThreadTilesViewComponent},
-  {path: 'listView', component:ThreadListViewComponent},
   {path: 'faculties', component:FacultyViewComponent},
   {path: 'newThread', component:NewThreadComponent},
-  {path: 'faculty/:id', component:FacultyThreadViewComponent},
-  {path: 'thread', component:ThreadComponent},
+  {path: 'faculty/:id', component:CoursesComponent},
+  {path: 'course/:id/threads', component:ThreadListViewComponent},
+  {path: 'thread/:id', component:ThreadComponent},
   {path: 'courses', component:CoursesComponent}
 
 

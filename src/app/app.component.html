@@ -7,13 +7,12 @@
                     <img src="../../../assets/lmslogo.png">
                 </div>
                 <div class="partial-divider"></div>
-                <div class="left-panel-content" *ngIf="router.url != '/faculties'">
-                  <div routerLink="/faculties">
-                    Softversko i informaciono inzenjerstvo
-                  </div>
-                  <div routerLink="/faculties">
-                    Informatika i racunarstvo
-                  </div>
+                <div *ngIf="router.url === '/courses'">
+                  <app-left-panel-content-faculty></app-left-panel-content-faculty>
+                </div>
+
+                <div *ngIf="router.url === '/listView'">
+                  <app-left-panel-content-course></app-left-panel-content-course>
                 </div>
     
             </div>
