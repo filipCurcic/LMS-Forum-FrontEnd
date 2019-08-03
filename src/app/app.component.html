@@ -7,11 +7,11 @@
                     <img src="../../../assets/lmslogo.png">
                 </div>
                 <div class="partial-divider"></div>
-                <div *ngIf="router.url === '/courses'">
+                <div *ngIf="activePage === '1'">
                   <app-left-panel-content-faculty></app-left-panel-content-faculty>
                 </div>
 
-                <div *ngIf="router.url === '/listView'">
+                <div *ngIf="activePage === '2'">
                   <app-left-panel-content-course></app-left-panel-content-course>
                 </div>
     

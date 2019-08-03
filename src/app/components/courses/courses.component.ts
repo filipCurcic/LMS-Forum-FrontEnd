@@ -14,7 +14,8 @@ export class CoursesComponent implements OnInit {
   constructor(private courseService:CoursesService, private route: ActivatedRoute, private facultyService:FacultySubForumService) { }
 
   ngOnInit() {
-    this.getAll()
+    this.getAll();
+    this.setActivePage();
   }
 
   courses:any = []
@@ -23,6 +24,11 @@ export class CoursesComponent implements OnInit {
     this.facultyService.getSubForums(+this.route.snapshot.paramMap.get('id')).subscribe((data: SubForum[]) => {
       this.courses = data;
     });
+  }
+
+  setActivePage():void {
+    let activePage = 'active';
+    localStorage.setItem(activePage, '1');
   }
 
 }

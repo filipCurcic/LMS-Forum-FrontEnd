@@ -27,7 +27,8 @@
   </div>
 
   <div class="thread-footer">
-    <span style="float: right; margin-right: 2vw; font-size: 0.6; cursor: pointer; color:rgb(77, 77, 77)" (click)="openReply()" class="reply-button">reply</span>
+    <span style="float: right; margin-right: 2vw; font-size: 0.6; cursor: pointer; color:rgb(77, 77, 77)"
+      (click)="openReply()" class="reply-button">reply</span>
   </div>
 
 </div>
@@ -37,14 +38,23 @@
     <span style="font-weight: 525">New Reply</span>
     <span style="position: absolute; left:91%; cursor: pointer;" (click)="closeReply()">x</span>
   </div>
-  <div class="content-input">
-    <textarea name="" id="" cols="143" rows="10" class="reply-content" placeholder="Reply content.."></textarea>
+
+
+  <div class="content-input" novalidate>
+    <form>
+      <textarea [(ngModel)]="newReply.content" name="replyContent" id="" cols="143 " rows="10" class="reply-content" placeholder="Reply content.."></textarea>
+      
+
+    </form>
+    {{newReply.content}}
   </div>
 
-  <button mat-raised-button style="width: 6vw; margin-top:1vw; margin-left:48.2vw">Post</button>
+
+  <button type="button" (click)="onSubmit()" mat-raised-button
+    style="width: 6vw; margin-top:1vw; margin-left:48.2vw">Post</button>
 
 
-  
+
 
 
 </div>
@@ -63,7 +73,7 @@
     </div>
     <div class="reply-thread-content">
 
-      
+
       <div class="reply-content">
         <span style="font-size: 0.865vw; font-weight: 300;">
           {{reply.content}}
@@ -79,5 +89,3 @@
   </div>
 
 </div>
-
-

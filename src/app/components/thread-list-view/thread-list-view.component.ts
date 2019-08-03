@@ -14,6 +14,7 @@ export class ThreadListViewComponent implements OnInit {
 
   ngOnInit() {
     this.getAll();
+    this.setActivePage();
   }
   threads:any = []
 
@@ -23,4 +24,10 @@ export class ThreadListViewComponent implements OnInit {
       this.threads = data;
     });
   }
+
+  setActivePage():void {
+    let activePage = 'active';
+    localStorage.setItem(activePage, '2');
+  }
+
 }

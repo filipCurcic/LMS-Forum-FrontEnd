@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import Thread from 'src/app/models/thread';
 import Reply from 'src/app/models/reply';
+import { Observable, from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -32,8 +33,11 @@ export class ThreadService {
 
   add(Thread: Thread) {
     
-    return this.http.post(this.url + '/add', Thread);
+    return this.http.post(this.url + `/add`, Thread);
   }
+
+  
+
 
   update(thread:Thread, id:String) {
    

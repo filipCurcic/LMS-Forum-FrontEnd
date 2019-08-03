@@ -28,7 +28,7 @@ export class ReplyService {
 
   add(Reply: Reply) {
     
-    return this.http.post(this.url + '/add', Reply);
+    return this.http.post('http://localhost:8080/reply/add', Reply);
   }
 
   update(Reply:Reply, id:String) {
