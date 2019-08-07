@@ -6,12 +6,12 @@ import SubForum from './subForum';
 export default class Thread {
     id:number;
     dateOfCreation:Date;
-    title:string;
     content:string;
     file:File;
     author:ForumUser;
     replies:Reply[];
-    subForum:SubForum;
+    subForum:SubForum;    
+    threadName:string;
 
 
 }

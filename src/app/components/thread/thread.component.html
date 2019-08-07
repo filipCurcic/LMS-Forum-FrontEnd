@@ -6,7 +6,7 @@
       <div class="info">
         <span style="font-size:0.7vw; font-weight: 660"> {{thread.author.registeredUser.username}} </span>
         <br>
-        <span style="font-size:0.7vw; ">administrator</span>
+        <span style="font-size:0.7vw; "></span>
       </div>
     </div>
     <div class="thread-content">
@@ -42,16 +42,16 @@
 
   <div class="content-input" novalidate>
     <form>
-      <textarea [(ngModel)]="newReply.content" name="replyContent" id="" cols="143 " rows="10" class="reply-content" placeholder="Reply content.."></textarea>
+      <textarea [(ngModel)]="newReply.content" name="replyContent" id="" cols="139 " rows="7" class="new-reply-content" placeholder="Reply content.."></textarea>
       
 
     </form>
-    {{newReply.content}}
+    
   </div>
 
 
   <button type="button" (click)="onSubmit()" mat-raised-button
-    style="width: 6vw; margin-top:1vw; margin-left:48.2vw">Post</button>
+    style="width: 6vw; margin-top:0.5vw; margin-left:48.2vw">Post</button>
 
 
 

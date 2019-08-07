@@ -4,7 +4,7 @@
     <div style="margin-left: 33.5vw;">Threads</div>
     <div style="margin-left: 4.3vw;">Latest Thread</div>
   </div>
-
+  
   <div class="thread" *ngFor="let course of courses;" routerLink="/listView">
     <div class="thread-name" routerLink="/course/{{course.id}}/threads">
       {{course.name}}

@@ -123,11 +123,22 @@
 .new-reply-container {
     margin-top: 2vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
+    width: 98%;
     height: auto;
     background-color: rgba(243, 243, 243, 0.541);
     padding: 0.5vw;
     margin-bottom: 2vw;
+}
+
+.new-reply-content {
+    margin-left: auto;
+    margin-right: auto;
+    height: 82%;
+    width: 96.65%;
+    padding-left: 0.8vw; 
+    padding-right: 0.8vw;
+    padding-top:0.8vw;
+    padding-bottom:0.8vw;
 }
 
 .thread-content {

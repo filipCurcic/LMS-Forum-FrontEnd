@@ -6,5 +6,5 @@ export default class SubForum {
     name:string;
     studyCourse:any;
     threads:Thread[];
-    facultySubForum:FacultySubForum;
+    subFacultyForum:FacultySubForum;
 }

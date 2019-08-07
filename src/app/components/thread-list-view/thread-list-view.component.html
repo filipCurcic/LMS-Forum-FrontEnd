@@ -1,4 +1,6 @@
-
+<span style="margin-left: 49.27vw; margin-bottom: 1vw">
+  <button mat-raised-button routerLink="/newThread">New Thread</button> </span>
+  <br>
 <div class="vertical-thread-container" [class.mat-elevation-z3]="true">
   
   <div class="thread-information" >
@@ -6,6 +8,7 @@
     <div style="margin-left: 30.5vw;">Replies</div>
     <div style="margin-left: 4.3vw;">Latest Post By</div>
   </div>
+  
   <div class="thread" *ngFor="let thread of threads;" routerLink="/thread/{{thread.id}}" >
     <div class="thread-name">
       {{thread.threadName}}

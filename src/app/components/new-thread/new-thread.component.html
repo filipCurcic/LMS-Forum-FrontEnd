@@ -3,15 +3,16 @@
     <span>New Thread</span>
   </div>
   <div class="title-input">
-    <input type="text" placeholder="Thread title..">
+    <input type="text" placeholder="Thread title.." [(ngModel)]="newThread.threadName">
 
   </div>
   <div class="partial-divider"></div>
 
   <div class="content-input">
-    <textarea name="" id="" cols="30" rows="10" class="thread-content" placeholder="Thread content.."></textarea>
+    <textarea name="" id="" cols="30" rows="10" class="thread-content" placeholder="Thread content.." [(ngModel)]="newThread.content"></textarea>
   </div>
 
-  <button mat-raised-button routerLink="/" style="width: 6vw; margin-top:1vw; margin-left:48.2vw">Post</button>
+  <button mat-raised-button (click)="onSubmit()" style="width: 6vw; margin-top:1vw; margin-left:48.2vw">Post</button>
+  {{facultyId}}
 
 </div>

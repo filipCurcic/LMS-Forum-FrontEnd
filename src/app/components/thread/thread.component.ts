@@ -27,11 +27,6 @@ export class ThreadComponent implements OnInit {
 
   activeThread:Thread;
 
-  // this.newReply = {"id":null, 
-  //   "content":'',
-  //   "thread":this.thread,
-  //   "author":{"id":1, "forum":null, "registeredUser":null, "startedThreads":[], "replies":[], "roles":[]}}
-
   newReply =new Reply();
 
   
@@ -57,11 +52,14 @@ export class ThreadComponent implements OnInit {
   }
 
   onSubmit() {
-    this.newReply.thread = this.thread;
+    
     this.newReply.id = null;
+    this.newReply.forumThread = this.thread;
     this.newReply.author = {"id":1, "forum":null, "registeredUser":null, "startedThreads":[], "replies":[], "roles":[]}
     console.log(this.newReply)
     this.replyService.add(this.newReply).subscribe();
+    this.getThread();
+    window.location.reload();
   }
 
 
