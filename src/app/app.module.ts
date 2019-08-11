@@ -23,7 +23,9 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { LeftPanelContentFacultyComponent } from './components/left-panel-content-faculty/left-panel-content-faculty.component';
 import { LeftPanelContentCourseComponent } from './components/left-panel-content-course/left-panel-content-course.component';
 import { ReplyComponent } from './components/reply/reply.component';
-import { SuccessReplyComponent } from './success-reply/success-reply.component';
+import { SuccessReplyComponent } from './components/success-reply/success-reply.component';
+import { LoginComponent } from './components/login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +41,7 @@ import { SuccessReplyComponent } from './success-reply/success-reply.component';
     LeftPanelContentFacultyComponent,
     LeftPanelContentCourseComponent,
     SuccessReplyComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

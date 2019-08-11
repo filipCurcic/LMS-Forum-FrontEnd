@@ -1,0 +1,48 @@
+.container {
+    background-color: rgba(243, 243, 243, 0.541);
+    width: 35vw;
+    height: 20vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding: 1vw;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 5vw;
+    margin-top: 3vw;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 5vw;
+    margin-top: 3vw;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }

@@ -3,6 +3,7 @@ import { CoursesService } from 'src/app/services/courses/courses.service';
 import SubForum from 'src/app/models/subForum';
 import { ActivatedRoute } from '@angular/router';
 import { FacultySubForumService } from 'src/app/services/faculty-sub-forum/faculty-sub-forum.service';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'app-courses',
@@ -11,12 +12,14 @@ import { FacultySubForumService } from 'src/app/services/faculty-sub-forum/facul
 })
 export class CoursesComponent implements OnInit {
 
-  constructor(private courseService:CoursesService, private route: ActivatedRoute, private facultyService:FacultySubForumService) { }
+  constructor(private courseService:CoursesService, private data:DataService, private route: ActivatedRoute, private facultyService:FacultySubForumService) { }
 
   ngOnInit() {
     this.getAll();
     this.setActivePage();
   }
+
+  currentPage:number;
 
   courses:any = []
 
@@ -27,8 +30,11 @@ export class CoursesComponent implements OnInit {
   }
 
   setActivePage():void {
-    let activePage = 'active';
-    localStorage.setItem(activePage, '1');
+    this.data.chageActivePage(1);
+  }
+
+  getCurrentPage() {
+    this.data.currentPage.subscribe(page => this.currentPage = page);
   }
 
 }

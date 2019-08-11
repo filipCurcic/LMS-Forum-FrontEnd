@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { interval, Subscription } from 'rxjs';
+import { DataService } from './services/data/data.service';
 
 @Component({
   selector: 'app-root',
@@ -10,15 +11,24 @@ import { interval, Subscription } from 'rxjs';
 export class AppComponent implements OnInit{
   title = 'lms-forum';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private data:DataService) { }
 
   activePage: string;
   subscription: Subscription;
+  currentPage:number;
 
   ngOnInit() {
-    setTimeout(this.getActivePage, 10000);
+    this.getCurrentPage()
+    this.setActivePage()
   }
 
+  getCurrentPage() {
+    this.data.currentPage.subscribe(page => this.currentPage = page);
+  }
+
+  setActivePage():void {
+    this.data.chageActivePage(0);
+  }
 
 
 

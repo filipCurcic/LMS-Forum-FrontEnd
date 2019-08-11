@@ -1,0 +1,23 @@
+<div class="container" [class.mat-elevation-z3]="true">
+
+
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="Username" type="number" class="example-right-align">
+
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <button mat-raised-button style="width: 2vw; margin:auto">Login</button>
+
+
+  </div>
+</div>

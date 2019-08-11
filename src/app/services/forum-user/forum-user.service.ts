@@ -34,4 +34,11 @@ export class ForumUserService {
    
     return this.http.put(this.url+`/${id}`, ForumUser)
   }
+
+  getLoggedUser(username: String){
+    return this.http.get<ForumUser>(this.url + `/logged/${username}`);
+  }
+
+
+
 }

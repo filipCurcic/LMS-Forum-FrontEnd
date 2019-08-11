@@ -15,11 +15,13 @@ export class ThreadListViewComponent implements OnInit {
 
   facultyId:string;
   threads:any = []
+  currentPage:number;
 
   ngOnInit() {
     this.getAll();
     this.setActivePage();
     this.data.currentId.subscribe(id => this.facultyId = id);
+    this.setActivePage();
     this.changeFacultyId();
 
   }
@@ -34,9 +36,14 @@ export class ThreadListViewComponent implements OnInit {
     });
   }
 
+  
+
+  getCurrentPage() {
+    this.data.currentPage.subscribe(page => this.currentPage = page);
+  }
+
   setActivePage():void {
-    let activePage = 'active';
-    localStorage.setItem(activePage, '2');
+    this.data.chageActivePage(2);
   }
 
 }

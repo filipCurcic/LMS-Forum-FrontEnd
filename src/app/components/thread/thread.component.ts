@@ -6,6 +6,7 @@ import Reply from 'src/app/models/reply';
 import ForumUser from 'src/app/models/forumUser';
 import { ReplyService } from 'src/app/services/reply/reply.service';
 import { FormGroup } from '@angular/forms';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'app-thread',
@@ -14,11 +15,12 @@ import { FormGroup } from '@angular/forms';
 })
 export class ThreadComponent implements OnInit {
 
-  constructor(private threadService:ThreadService, private replyService:ReplyService, private route:ActivatedRoute) { }
+  constructor(private threadService:ThreadService, private data:DataService, private replyService:ReplyService, private route:ActivatedRoute) { }
 
   ngOnInit() {
     this.getThread();
     this.getReplies();
+    this.setActivePage();
   }
 
   thread:Thread;
@@ -28,6 +30,8 @@ export class ThreadComponent implements OnInit {
   activeThread:Thread;
 
   newReply =new Reply();
+
+  currentPage:number;
 
   
 
@@ -49,6 +53,14 @@ export class ThreadComponent implements OnInit {
       this.replies = data;
     });
     
+  }
+
+  setActivePage():void {
+    this.data.chageActivePage(3);
+  }
+
+  getCurrentPage() {
+    this.data.currentPage.subscribe(page => this.currentPage = page);
   }
 
   onSubmit() {
