@@ -4,7 +4,9 @@ import { DataService } from '../data/data.service';
 import { HttpClient } from '@angular/common/http';
 import { ForumUserService } from '../forum-user/forum-user.service';
 import { Subject } from 'rxjs';
-import decode from 'jwt-decode'
+import decode from 'jwt-decode';
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -70,6 +72,10 @@ export class AuthenticationService {
         localStorage.setItem('userID', JSON.stringify(data.id));
       });
     }
+  }
+
+  getLoggedInUser() {
+    return this.userService.getLoggedUser(this.getCurrentUser())
   }
 
 

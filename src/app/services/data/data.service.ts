@@ -12,6 +12,10 @@ export class DataService {
   private pageSource = new BehaviorSubject<number>(0);
   currentPage = this.pageSource.asObservable();
 
+
+  private rolesSource = new BehaviorSubject<any>([]);
+  currentRoles = this.rolesSource.asObservable();
+
   constructor() { }
 
   changeId(id:string) {
@@ -21,4 +25,11 @@ export class DataService {
   chageActivePage(id:number) {
     this.pageSource.next(id);
   }
+
+
+  chageRoles(roles:any[]) {
+    this.rolesSource.next(roles);
+
+  }
+
 }

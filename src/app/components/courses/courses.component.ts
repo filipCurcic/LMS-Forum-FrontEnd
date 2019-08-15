@@ -23,6 +23,8 @@ export class CoursesComponent implements OnInit {
 
   courses:any = []
 
+  roles:any = []
+
   getAll():void {
     this.facultyService.getSubForums(+this.route.snapshot.paramMap.get('id')).subscribe((data: SubForum[]) => {
       this.courses = data;
@@ -36,5 +38,7 @@ export class CoursesComponent implements OnInit {
   getCurrentPage() {
     this.data.currentPage.subscribe(page => this.currentPage = page);
   }
+
+  
 
 }

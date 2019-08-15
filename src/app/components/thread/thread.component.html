@@ -5,6 +5,7 @@
     <div class="poster-info">
       <div class="info">
         <span style="font-size:0.7vw; font-weight: 660"> {{thread.author.registeredUser.username}} </span>
+        
         <br>
         <span style="font-size:0.7vw; "></span>
       </div>
@@ -28,7 +29,7 @@
 
   <div class="thread-footer">
     <span style="float: right; margin-right: 2vw; font-size: 0.6; cursor: pointer; color:rgb(77, 77, 77)"
-      (click)="openReply()" class="reply-button">reply</span>
+      (click)="openReply()" class="reply-button" *ngIf="isLoggedIn">reply</span>
   </div>
 
 </div>

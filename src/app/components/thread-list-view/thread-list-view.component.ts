@@ -16,6 +16,7 @@ export class ThreadListViewComponent implements OnInit {
   facultyId:string;
   threads:any = []
   currentPage:number;
+  roles:any = []
 
   ngOnInit() {
     this.getAll();
@@ -44,6 +45,10 @@ export class ThreadListViewComponent implements OnInit {
 
   setActivePage():void {
     this.data.chageActivePage(2);
+  }
+
+  getCurrentRoles() {
+    this.data.currentRoles.subscribe(roles => this.roles = roles);
   }
 
 }

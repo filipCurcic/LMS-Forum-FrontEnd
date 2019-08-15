@@ -26,22 +26,9 @@
                 <div class="right-panel-header">
                   
                   <div class="header-buttons">
-                    <button>{{currentPage}}</button>
-                    <button>Button1</button>
-                    <button>Button2</button>
-                    <mat-button-toggle-group #group="matButtonToggleGroup" style="margin-left: 31.6vw;" value="left">
-                        <mat-button-toggle value="left" aria-label="Text align left" routerLink="/thread" >
-                          <mat-icon>view_stream</mat-icon>
-                        </mat-button-toggle>
-                        <mat-button-toggle value="right" aria-label="Text align center" routerLink="/listView">
-                          <mat-icon>view_module</mat-icon>
-                        </mat-button-toggle>
-                    </mat-button-toggle-group>
+                    <button routerLink="/login" style="margin-left: 51.6vw;" *ngIf="!isLoggedIn">Login</button>
+                    <button (click)="onLogout()" style="margin-left: 50.6vw;" *ngIf="isLoggedIn">Log out</button>
                   </div>
-    
-                 
-    
-    
                 </div>
                 <div class="complete-divider"></div>
                 <div class="right-panel-content">

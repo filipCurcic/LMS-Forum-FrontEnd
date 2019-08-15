@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing-module';
 import { HttpClientModule } from '@angular/common/http'; 
 import { FormsModule } from '@angular/forms';
 
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import {MatCardModule} from '@angular/material/card';
@@ -25,6 +27,8 @@ import { LeftPanelContentCourseComponent } from './components/left-panel-content
 import { ReplyComponent } from './components/reply/reply.component';
 import { SuccessReplyComponent } from './components/success-reply/success-reply.component';
 import { LoginComponent } from './components/login/login.component';
+import { ForumUserService } from './services/forum-user/forum-user.service';
+import { AuthInterceptor } from './services/authentication/authentication-interceptor';
 
 @NgModule({
   declarations: [
@@ -56,7 +60,8 @@ import { LoginComponent } from './components/login/login.component';
     MatInputModule, 
     FormsModule
   ],
-  providers: [],
+  providers: [ForumUserService, { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

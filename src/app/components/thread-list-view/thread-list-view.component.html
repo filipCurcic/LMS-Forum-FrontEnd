@@ -1,5 +1,5 @@
 <span style="margin-left: 49.27vw; margin-bottom: 1vw">
-  <button mat-raised-button routerLink="/newThread">New Thread</button> </span>
+  <button mat-raised-button routerLink="/newThread" *ngIf="(roles.indexOf('ROLE_ADMINISTRATOR') >= 0)">New Thread</button> </span>
   <br>
 <div class="vertical-thread-container" [class.mat-elevation-z3]="true">
   
